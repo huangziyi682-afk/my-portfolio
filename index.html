@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黄紫怡 | AI 产品经理作品集</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            scroll-behavior: smooth;
+            line-height: 1.7;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #db2777 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .hero-bg {
+            background-image: radial-gradient(circle at 0% 0%, rgba(79, 70, 229, 0.08) 0%, transparent 50%),
+                              radial-gradient(circle at 100% 100%, rgba(219, 39, 119, 0.08) 0%, transparent 50%);
+        }
+        .section-tag {
+            @apply inline-block px-3 py-1 text-xs font-semibold tracking-wider text-indigo-600 uppercase bg-indigo-50 rounded-full mb-4;
+        }
+        .experience-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.1);
+        }
+        .career-step::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -2rem;
+            width: 1.5rem;
+            height: 2px;
+            background: #e2e8f0;
+            display: none;
+        }
+        @media (min-width: 768px) {
+            .career-step:not(:last-child)::after { display: block; }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-card border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-6 lg:px-12">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-2">
+                    <span class="text-xl font-bold gradient-text">黄紫怡 Ziyi</span>
+                    <span class="text-slate-400 text-sm hidden sm:block">| AI 产品经理作品集</span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                    <a href="#home" class="hover:text-indigo-600 transition-colors">首页</a>
+                    <a href="#about" class="hover:text-indigo-600 transition-colors">关于我</a>
+                    <a href="#experience" class="hover:text-indigo-600 transition-colors">实习经历</a>
+                    <a href="#project-speaklogic" class="hover:text-indigo-600 transition-colors">项目想法</a>
+                    <a href="#analysis" class="hover:text-indigo-600 transition-colors">产品拆解</a>
+                    <a href="#contact" class="text-indigo-600 font-semibold">联系我</a>
+                </div>
+                <button class="md:hidden p-2 text-slate-600">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-40 pb-24 hero-bg">
+        <div class="max-w-5xl mx-auto px-6 lg:px-12">
+            <div class="flex flex-col items-center text-center space-y-10">
+                <div class="flex flex-col items-center space-y-8 animate-fade-in">
+                    <!-- Avatar and Name Block -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 mb-4">
+                        <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white shadow-2xl ring-4 ring-indigo-50 transition-transform hover:scale-105 duration-500">
+                            <!-- 请确保根目录下有 avatar.jpg 文件 -->
+                            <img src="avatar.jpg" alt="黄紫怡" class="w-full h-full object-cover">
+                        </div>
+                        <div class="text-center md:text-left">
+                            <h1 class="text-6xl md:text-8xl font-extrabold text-slate-900 tracking-tight mb-2">黄紫怡</h1>
+                            <h2 class="text-indigo-600 font-bold tracking-widest uppercase text-lg md:text-xl">AI 产品经理 (实习/校招)</h2>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info Below Name -->
+                    <div class="flex flex-wrap justify-center gap-6 text-slate-600 font-medium bg-white/50 backdrop-blur-sm py-3 px-8 rounded-full border border-white/50 shadow-sm">
+                        <a href="tel:+8618515419902" class="flex items-center hover:text-indigo-600 transition-colors">
+                            <i data-lucide="phone" class="w-4 h-4 mr-2 text-indigo-500"></i> +86 185-1541-9902
+                        </a>
+                        <a href="mailto:huangzyi6468@163.com" class="flex items-center hover:text-indigo-600 transition-colors">
+                            <i data-lucide="mail" class="w-4 h-4 mr-2 text-indigo-500"></i> huangzyi6468@163.com
+                        </a>
+                        <span class="flex items-center">
+                            <i data-lucide="message-circle" class="w-4 h-4 mr-2 text-indigo-500"></i> WeChat: Hzy0030301
+                        </span>
+                    </div>
+
+                    <h1 class="text-4xl md:text-6xl font-bold text-slate-900 tracking-tight leading-tight mt-8">
+                        让 AI <span class="gradient-text">说话更好听</span><br>教人<span class="gradient-text">更有效</span>
+                    </h1>
+                    <p class="max-w-2xl mx-auto text-xl text-slate-600 mt-6 leading-relaxed">
+                        我想做那个在“不确定对话”中设计“确定性体验”的产品经理。
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="px-5 py-2.5 bg-white rounded-full shadow-sm border border-slate-100 flex items-center space-x-2 hover:border-indigo-200 transition-colors">
+                        <i data-lucide="mic" class="w-4 h-4 text-indigo-500"></i>
+                        <span class="text-sm font-semibold text-slate-700">AI 交互体验</span>
+                    </span>
+                    <span class="px-5 py-2.5 bg-white rounded-full shadow-sm border border-slate-100 flex items-center space-x-2 hover:border-purple-200 transition-colors">
+                        <i data-lucide="message-square" class="w-4 h-4 text-purple-500"></i>
+                        <span class="text-sm font-semibold text-slate-700">语音与表达</span>
+                    </span>
+                    <span class="px-5 py-2.5 bg-white rounded-full shadow-sm border border-slate-100 flex items-center space-x-2 hover:border-pink-200 transition-colors">
+                        <i data-lucide="graduation-cap" class="w-4 h-4 text-pink-500"></i>
+                        <span class="text-sm font-semibold text-slate-700">学习反馈设计</span>
+                    </span>
+                    <span class="px-5 py-2.5 bg-white rounded-full shadow-sm border border-slate-100 flex items-center space-x-2 hover:border-blue-200 transition-colors">
+                        <i data-lucide="layout" class="w-4 h-4 text-blue-500"></i>
+                        <span class="text-sm font-semibold text-slate-700">结构化思维</span>
+                    </span>
+                    <span class="px-5 py-2.5 bg-white rounded-full shadow-sm border border-slate-100 flex items-center space-x-2 hover:border-teal-200 transition-colors">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-teal-500"></i>
+                        <span class="text-sm font-semibold text-slate-700">指标与边界</span>
+                    </span>
+                </div>
+
+                <div class="pt-12 flex flex-col md:flex-row items-center gap-6">
+                    <a href="#experience" class="px-10 py-4 bg-indigo-600 text-white rounded-full font-bold hover:bg-indigo-700 transition-all shadow-xl shadow-indigo-100">
+                        查看实战经历
+                    </a>
+                    <a href="#contact" class="px-10 py-4 bg-white text-slate-700 border border-slate-200 rounded-full font-bold hover:bg-slate-50 transition-all">
+                        获取完整作品集
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-28 bg-white opacity-0 animate-fade-in" style="animation-delay: 0.1s;">
+        <div class="max-w-6xl mx-auto px-6 lg:px-12">
+            <div class="grid md:grid-cols-2 gap-20 items-center">
+                <div class="space-y-10">
+                    <div>
+                        <span class="section-tag">Profile</span>
+                        <h2 class="text-4xl font-bold text-slate-900 mb-8 leading-tight">播音主持的底色 × 教育学的逻辑</h2>
+                        <div class="space-y-6 text-slate-600 text-lg">
+                            <p>
+                                <strong class="text-slate-900">本科：贵州师范大学 - 播音与主持艺术</strong><br>
+                                训练了我对“表达是否听得进去”的天然敏感度，理解声音背后的情绪与节奏。
+                            </p>
+                            <p>
+                                <strong class="text-slate-900">硕士：南安普顿大学 - 教育学</strong><br>
+                                训练了我对“人如何真正学会并改变行为”的深度理解，关注反馈机制的有效性。
+                            </p>
+                            <p class="pt-4 border-t border-slate-100 italic">
+                                这两件事，正好对应当下 AI 产品的关键短板：AI 很能“说”，但常常“不像人”；AI 很能“教”，但反馈方式不一定能让用户真正进步。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-900 p-8 rounded-3xl text-white shadow-2xl relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-110"></div>
+                        <h3 class="font-bold text-indigo-400 mb-4 flex items-center text-xl">
+                            <i data-lucide="lightbulb" class="w-6 h-6 mr-3"></i> 我对 AI PM 的理解
+                        </h3>
+                        <p class="text-slate-300 leading-relaxed italic text-lg">
+                            “传统 PM 设计的是‘确定的系统’，而 AI PM 设计的是‘不确定的对话’。用户输入不可控，但体验必须稳定、有用、舒适。”
+                        </p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="space-y-6 pt-12">
+                        <div class="bg-indigo-50 p-8 rounded-3xl border border-indigo-100 hover:shadow-lg transition-all">
+                            <i data-lucide="users" class="w-10 h-10 text-indigo-600 mb-6"></i>
+                            <h4 class="font-bold text-xl mb-3 text-indigo-900">理解人</h4>
+                            <p class="text-sm text-indigo-800/70">用户为何问、在意什么、害怕什么？设计适配偏好的回应。</p>
+                        </div>
+                        <div class="bg-indigo-600 p-8 rounded-3xl text-white shadow-xl hover:bg-indigo-700 transition-all">
+                            <i data-lucide="zap" class="w-10 h-10 mb-6"></i>
+                            <h4 class="font-bold text-xl mb-3">优势匹配</h4>
+                            <p class="text-sm text-indigo-100">在数字人助教与个性化文旅实战中练习“把不确定性做成确定体验”。</p>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 hover:shadow-lg transition-all">
+                            <i data-lucide="code" class="w-10 h-10 mb-6 text-slate-700"></i>
+                            <h4 class="font-bold text-xl mb-3 text-slate-900">约束 AI</h4>
+                            <p class="text-sm text-slate-500">如何让模型输出长期保持在安全、有用、体面、可控的范围？</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg transition-all">
+                            <i data-lucide="target" class="w-10 h-10 text-purple-500 mb-6"></i>
+                            <h4 class="font-bold text-xl mb-3 text-slate-900">求职方向</h4>
+                            <p class="text-sm text-slate-500">语音交互 / 对话设计 / AI 教练型产品 / 反馈机制</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-28 bg-slate-50 opacity-0 animate-fade-in" style="animation-delay: 0.2s;">
+        <div class="max-w-6xl mx-auto px-6 lg:px-12">
+            <div class="text-center mb-20">
+                <span class="section-tag">Career Timeline</span>
+                <h2 class="text-4xl font-bold text-slate-900">核心实战经历</h2>
+                <p class="text-slate-500 mt-4">从 0 到 1 的实战支撑，将 AI 能力转化为业务价值</p>
+            </div>
+
+            <div class="relative">
+                <!-- Vertical Line -->
+                <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 top-0 h-full w-px bg-slate-200"></div>
+
+                <div class="space-y-16">
+                    <!-- TAL -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="hidden md:flex md:w-1/2 justify-end pr-12 text-right">
+                            <div class="space-y-1">
+                                <p class="text-indigo-600 font-bold text-xl">2025.09 - 2026.01</p>
+                                <p class="text-slate-400 font-medium">北京</p>
+                            </div>
+                        </div>
+                        <div class="absolute left-[-4px] md:left-1/2 transform md:-translate-x-1/2 w-2 h-2 rounded-full bg-indigo-600 ring-4 ring-indigo-100 z-10"></div>
+                        <div class="md:w-1/2 md:pl-12 w-full pl-8">
+                            <div class="experience-card bg-white p-8 rounded-3xl border border-slate-200 transition-all">
+                                <div class="flex flex-col sm:flex-row justify-between items-start mb-4">
+                                    <h3 class="text-2xl font-bold text-slate-900">学而思｜产品运营</h3>
+                                    <span class="bg-indigo-50 text-indigo-700 text-xs px-3 py-1 rounded-full font-bold mt-2 sm:mt-0">AI 数字人</span>
+                                </div>
+                                <p class="md:hidden text-indigo-600 font-bold mb-4">2025.09 - 2026.01</p>
+                                <ul class="space-y-4 text-slate-600">
+                                    <li class="flex items-start">
+                                        <i data-lucide="check-circle-2" class="w-5 h-5 mr-3 text-indigo-500 shrink-0 mt-1"></i>
+                                        <span>深度参与 <strong class="text-slate-900">AI 数字人助教</strong> 0-1 落地，基于九章大模型打造教育场景解决方案</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i data-lucide="check-circle-2" class="w-5 h-5 mr-3 text-indigo-500 shrink-0 mt-1"></i>
+                                        <span>完成竞品分析、模型能力集成、测评指标设计，推动 SAAS 服务与 API 接口落地</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i data-lucide="check-circle-2" class="w-5 h-5 mr-3 text-indigo-500 shrink-0 mt-1"></i>
+                                        <span>5 个月交付 MVP，支持 500+ 教师，<strong class="text-indigo-600">答疑效率提升 5 倍，教师负担降低 40%</strong></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EasyTransfer -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 w-full pl-8 order-2 md:order-1">
+                            <div class="experience-card bg-white p-8 rounded-3xl border border-slate-200 transition-all text-right md:text-left">
+                                <div class="flex flex-col sm:flex-row-reverse md:flex-row justify-between items-start mb-4">
+                                    <h3 class="text-2xl font-bold text-slate-900 w-full md:w-auto">易思汇｜海外产品运营</h3>
+                                    <span class="bg-blue-50 text-blue-700 text-xs px-3 py-1 rounded-full font-bold mt-2 sm:mt-0">海外运营</span>
+                                </div>
+                                <p class="md:hidden text-indigo-600 font-bold mb-4">2024.08 - 2024.11</p>
+                                <ul class="space-y-4 text-slate-600 text-left">
+                                    <li class="flex items-start">
+                                        <i data-lucide="check-circle-2" class="w-5 h-5 mr-3 text-blue-500 shrink-0 mt-1"></i>
+                                        <span>负责南安普顿大学缴费产品运营，搭建线上线下联动触达体系</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i data-lucide="check-circle-2" class="w-5 h-5 mr-3 text-blue-500 shrink-0 mt-1"></i>
+                                        <span>迭代转化路径，优化流程引导，<strong class="text-indigo-600">月均 30+ 有效咨询，转化率 3%-5%</strong></span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i data-lucide="check-circle-2" class="w-5 h-5 mr-3 text-blue-500 shrink-0 mt-1"></i>
+                                        <span>沉淀海外院校可复用运营模型，支撑规模化落地</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="absolute left-[-4px] md:left-1/2 transform md:-translate-x-1/2 w-2 h-2 rounded-full bg-blue-600 ring-4 ring-blue-100 z-10"></div>
+                        <div class="hidden md:flex md:w-1/2 justify-start pl-12 order-1 md:order-2">
+                            <div class="space-y-1">
+                                <p class="text-blue-600 font-bold text-xl">2024.08 - 2024.11</p>
+                                <p class="text-slate-400 font-medium">英国/海外</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI Travel -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="hidden md:flex md:w-1/2 justify-end pr-12 text-right">
+                            <div class="space-y-1">
+                                <p class="text-teal-600 font-bold text-xl">2024.03 - 2024.08</p>
+                                <p class="text-slate-400 font-medium">贵州/校园</p>
+                            </div>
+                        </div>
+                        <div class="absolute left-[-4px] md:left-1/2 transform md:-translate-x-1/2 w-2 h-2 rounded-full bg-teal-600 ring-4 ring-teal-100 z-10"></div>
+                        <div class="md:w-1/2 md:pl-12 w-full pl-8">
+                            <div class="experience-card bg-white p-8 rounded-3xl border border-slate-200 transition-all">
+                                <div class="flex flex-col sm:flex-row justify-between items-start mb-4">
+                                    <h3 class="text-2xl font-bold text-slate-900">AI 个性化文旅解决方案</h3>
+                                    <span class="bg-teal-50 text-teal-700 text-xs px-3 py-1 rounded-full font-bold mt-2 sm:mt-0">创业项目</span>
+                                </div>
+                                <p class="md:hidden text-indigo-600 font-bold mb-4">2024.03 - 2024.08</p>
+                                <ul class="space-y-4 text-slate-600">
+                                    <li class="flex items-start">
+                                        <i data-lucide="check-circle-2" class="w-5 h-5 mr-3 text-teal-500 shrink-0 mt-1"></i>
+                                        <span>调研游客需求，输出用户画像，打造 AI 行程规划与智能导览模块</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i data-lucide="check-circle-2" class="w-5 h-5 mr-3 text-teal-500 shrink-0 mt-1"></i>
+                                        <span>联动技术完成 MVP 开发，<strong class="text-indigo-600">用户需求匹配度达 85%</strong></span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i data-lucide="check-circle-2" class="w-5 h-5 mr-3 text-teal-500 shrink-0 mt-1"></i>
+                                        <span>获贵州省“互联网+”创新创业大赛产业赛道认可</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TV Station -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 w-full pl-8 order-2 md:order-1">
+                            <div class="experience-card bg-white p-8 rounded-3xl border border-slate-200 transition-all">
+                                <div class="flex flex-col sm:flex-row-reverse md:flex-row justify-between items-start mb-4">
+                                    <h3 class="text-2xl font-bold text-slate-900 w-full md:w-auto">孝感市电视台｜新媒体运营</h3>
+                                    <span class="bg-slate-100 text-slate-700 text-xs px-3 py-1 rounded-full font-bold mt-2 sm:mt-0">媒体内容</span>
+                                </div>
+                                <p class="md:hidden text-indigo-600 font-bold mb-4">2022.07 - 2022.11</p>
+                                <ul class="space-y-4 text-slate-600">
+                                    <li class="flex items-start">
+                                        <i data-lucide="check-circle-2" class="w-5 h-5 mr-3 text-slate-400 shrink-0 mt-1"></i>
+                                        <span>建立音频内容双重品控机制，<strong class="text-slate-900">200+ 条民生新闻零差错上线</strong></span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i data-lucide="check-circle-2" class="w-5 h-5 mr-3 text-slate-400 shrink-0 mt-1"></i>
+                                        <span>统筹采编全流程，搭建实习生培训体系，<strong class="text-indigo-600">新人上岗效率提升 30%</strong></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="absolute left-[-4px] md:left-1/2 transform md:-translate-x-1/2 w-2 h-2 rounded-full bg-slate-400 ring-4 ring-slate-100 z-10"></div>
+                        <div class="hidden md:flex md:w-1/2 justify-start pl-12 order-1 md:order-2">
+                            <div class="space-y-1">
+                                <p class="text-slate-500 font-bold text-xl">2022.07 - 2022.11</p>
+                                <p class="text-slate-400 font-medium">孝感/实习</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SpeakLogic Section -->
+    <section id="project-speaklogic" class="py-28 bg-white opacity-0 animate-fade-in" style="animation-delay: 0.3s;">
+        <div class="max-w-6xl mx-auto px-6 lg:px-12">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 space-y-4">
+                <div class="max-w-2xl">
+                    <span class="section-tag">Project Idea</span>
+                    <h2 class="text-4xl font-bold text-slate-900 mb-4">SpeakLogic</h2>
+                    <p class="text-xl text-slate-600 leading-relaxed">AI 面试表达训练助手：把“脑子里的答案”翻译成“面试官听得进去的话”。</p>
+                </div>
+                <div class="bg-indigo-50 px-6 py-4 rounded-2xl border border-indigo-100">
+                    <p class="text-2xl font-bold text-indigo-600">北极星指标</p>
+                    <p class="text-slate-500 text-sm">结构化表达采纳率</p>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-10">
+                <!-- Motivation -->
+                <div class="lg:col-span-1">
+                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 h-full">
+                        <h3 class="text-xl font-bold mb-8 flex items-center">
+                            <i data-lucide="search" class="w-6 h-6 mr-3 text-indigo-500"></i> 项目动机
+                        </h3>
+                        <div class="space-y-8">
+                            <div>
+                                <p class="font-bold text-slate-900 mb-2">痛点：知道但说不清</p>
+                                <p class="text-sm text-slate-500">有才学但表达无框架，价值传递打折扣。</p>
+                            </div>
+                            <div>
+                                <p class="font-bold text-slate-900 mb-2">发现：被忽略的可理解性</p>
+                                <p class="text-sm text-slate-500">市面工具重“答案对错”，轻“听感结构”。</p>
+                            </div>
+                            <div class="pt-6 border-t border-slate-200">
+                                <p class="text-indigo-600 font-bold leading-relaxed">不做“更聪明的回答”，<br>做“更可理解的表达”。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Core Features -->
+                <div class="lg:col-span-2 space-y-8">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+                            <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 mb-6">
+                                <i data-lucide="layout-template"></i>
+                            </div>
+                            <h4 class="text-xl font-bold mb-4">结构化脚手架</h4>
+                            <p class="text-slate-500 text-sm mb-6">提供 CARL / PREP 模板引导。AI 润色表达、标注缺失项，明确优化方向。</p>
+                            <p class="text-xs font-bold text-indigo-500 uppercase tracking-wider">设计逻辑：降低开口门槛</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+                            <div class="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center text-orange-600 mb-6">
+                                <i data-lucide="bar-chart-3"></i>
+                            </div>
+                            <h4 class="text-xl font-bold mb-4">表达结构热力图</h4>
+                            <p class="text-slate-500 text-sm mb-6">颜色标注具体问题（语速、断层）。语义分析将抽象问题转化为可改建议。</p>
+                            <p class="text-xs font-bold text-indigo-500 uppercase tracking-wider">设计逻辑：低情绪伤害反馈</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-900 p-8 rounded-3xl text-white">
+                        <div class="flex flex-col md:flex-row gap-8 items-center">
+                            <div class="flex-1">
+                                <div class="flex items-center space-x-3 mb-4 text-purple-400">
+                                    <i data-lucide="user-check" class="w-6 h-6"></i>
+                                    <h4 class="text-xl font-bold">追问式模拟面试官</h4>
+                                </div>
+                                <p class="text-slate-400 text-sm">识别简历模糊点，生成个性化深度追问。压实表达可信度，提升说服力。</p>
+                            </div>
+                            <div class="bg-white/10 px-6 py-4 rounded-2xl border border-white/10 text-center">
+                                <p class="text-xs font-bold text-indigo-300 uppercase mb-2">核心杠杆</p>
+                                <p class="text-sm font-medium">抓住面试灵魂：追问</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doubao Analysis Section -->
+    <section id="analysis" class="py-28 bg-slate-50 opacity-0 animate-fade-in" style="animation-delay: 0.4s;">
+        <div class="max-w-6xl mx-auto px-6 lg:px-12">
+            <div class="text-center mb-16">
+                <span class="section-tag">Product Analysis</span>
+                <h2 class="text-4xl font-bold text-slate-900">产品拆解：豆包 (Doubao)</h2>
+                <p class="text-slate-600 mt-4">从“表达体验”视角看字节跳动如何打造“最没有距离感”的 AI</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold text-green-600 flex items-center px-4">
+                        <i data-lucide="thumbs-up" class="w-5 h-5 mr-3"></i> 做得好的 (What's Good)
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm">
+                            <p class="font-bold text-slate-900 mb-2">1. 语音交互呼吸感</p>
+                            <p class="text-sm text-slate-500 leading-relaxed">自然停顿与语气词，符合播音“停连”逻辑，亲近感极强。牺牲效率换取情感共鸣。</p>
+                        </div>
+                        <div class="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm">
+                            <p class="font-bold text-slate-900 mb-2">2. 场景化入口降门槛</p>
+                            <p class="text-sm text-slate-500 leading-relaxed">首页卡片式引导，解决“不知道问什么”的问题，降低用户的认知负荷。</p>
+                        </div>
+                        <div class="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm">
+                            <p class="font-bold text-slate-900 mb-2">3. 失败处理体面感</p>
+                            <p class="text-sm text-slate-500 leading-relaxed">边界处采用引导式回复而非冷淡拒绝，情绪兜底让 AI 更有“温度”。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold text-indigo-600 flex items-center px-4">
+                        <i data-lucide="trending-up" class="w-5 h-5 mr-3"></i> 可以改进的 (To Improve)
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="p-8 rounded-3xl bg-indigo-50 border border-indigo-100">
+                            <div class="flex justify-between mb-2">
+                                <p class="font-bold text-indigo-900">1. 语音控制权</p>
+                                <span class="text-xs font-bold text-indigo-600">P0</span>
+                            </div>
+                            <p class="text-sm text-indigo-800/70 leading-relaxed">无法打断/调速。建议：增加语速调节与文字同步高亮，将控制权归还用户。</p>
+                        </div>
+                        <div class="p-8 rounded-3xl bg-indigo-50 border border-indigo-100">
+                            <div class="flex justify-between mb-2">
+                                <p class="font-bold text-indigo-900">2. 长回答结构预览</p>
+                                <span class="text-xs font-bold text-indigo-600">P1</span>
+                            </div>
+                            <p class="text-sm text-indigo-800/70 leading-relaxed">增加“要点速览”，符合教育学先行组织者理论，提升信息吸收效率。</p>
+                        </div>
+                        <div class="p-8 rounded-3xl bg-indigo-50 border border-indigo-100">
+                            <div class="flex justify-between mb-2">
+                                <p class="font-bold text-indigo-900">3. 引入表达反馈模式</p>
+                                <span class="text-xs font-bold text-indigo-600">P2</span>
+                            </div>
+                            <p class="text-sm text-indigo-800/70 leading-relaxed">新增表达优化模块，让 AI 不仅能答疑，也能作为教练优化用户的表达习惯。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Path Section -->
+    <section class="py-28 bg-white">
+        <div class="max-w-6xl mx-auto px-6 lg:px-12">
+            <div class="text-center mb-16">
+                <span class="section-tag">Future</span>
+                <h2 class="text-4xl font-bold text-slate-900">未来五年职业规划</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-12 relative">
+                <div class="career-step relative p-8 rounded-3xl bg-slate-50 border border-slate-100 text-center">
+                    <div class="w-12 h-12 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold mx-auto mb-6 shadow-lg shadow-indigo-100">1-2</div>
+                    <h4 class="font-bold text-lg mb-4">夯实执行层</h4>
+                    <p class="text-sm text-slate-500">熟练完成需求、原型、项目跟进与数据复盘，成为靠谱的执行型 AI PM。</p>
+                </div>
+                <div class="career-step relative p-8 rounded-3xl bg-slate-50 border border-slate-100 text-center">
+                    <div class="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold mx-auto mb-6 shadow-lg shadow-purple-100">2-3</div>
+                    <h4 class="font-bold text-lg mb-4">深耕垂直域</h4>
+                    <p class="text-sm text-slate-500">聚焦语音交互与 AI 教育，独立负责核心模块，形成专业技术壁垒。</p>
+                </div>
+                <div class="career-step relative p-8 rounded-3xl bg-slate-50 border border-slate-100 text-center">
+                    <div class="w-12 h-12 bg-pink-600 text-white rounded-full flex items-center justify-center font-bold mx-auto mb-6 shadow-lg shadow-pink-100">3-5</div>
+                    <h4 class="font-bold text-lg mb-4">成为专家型</h4>
+                    <p class="text-sm text-slate-500">主导核心体验迭代，输出可复用的对话规范，打造有行业影响力的 AI 产品。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <footer id="contact" class="py-24 bg-slate-900 text-white">
+        <div class="max-w-6xl mx-auto px-6 lg:px-12">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <h2 class="text-4xl font-bold leading-tight">准备好一起<br><span class="text-indigo-400">定义 AI 交互</span> 的未来了吗？</h2>
+                    <p class="text-slate-400 text-lg">期待与优秀的团队共同探索 AI 产品的无限可能。</p>
+                    <div class="flex flex-col space-y-4">
+                        <a href="mailto:huangzyi6468@163.com" class="flex items-center space-x-4 text-slate-300 hover:text-white transition-colors">
+                            <i data-lucide="mail" class="w-6 h-6 text-indigo-400"></i>
+                            <span class="text-lg">huangzyi6468@163.com</span>
+                        </a>
+                        <div class="flex items-center space-x-4 text-slate-300">
+                            <i data-lucide="phone" class="w-6 h-6 text-indigo-400"></i>
+                            <span class="text-lg">+86 185-1541-9902</span>
+                        </div>
+                        <div class="flex items-center space-x-4 text-slate-300">
+                            <i data-lucide="message-circle" class="w-6 h-6 text-indigo-400"></i>
+                            <span class="text-lg">WeChat: Hzy0030301</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white/5 p-10 rounded-3xl border border-white/10 backdrop-blur-sm">
+                        <a href="#" class="p-4 bg-white/5 rounded-2xl border border-white/10 flex items-center justify-between hover:bg-white/10 transition-all">
+                            <span>PDF 简历下载</span>
+                            <i data-lucide="download" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
